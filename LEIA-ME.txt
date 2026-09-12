@@ -1,0 +1,30 @@
+IP STORE — Site (versão para revisão)
+======================================
+
+Como rodar o projeto localmente:
+
+1. Instale o Node.js (v18 ou superior).
+2. No terminal, dentro desta pasta, rode:
+     npm install
+3. Para ver o site em modo de desenvolvimento:
+     npm run dev
+   Isso abre um endereço local (geralmente http://localhost:8443).
+4. Para gerar a versão de produção (arquivos finais para publicar):
+     npm run build
+   Os arquivos ficam na pasta "dist/".
+
+O que já está pronto nesta versão:
+- Logo real da loja, endereço real (Praça Castro Alves, Barrolândia, Belmonte – BA),
+  WhatsApp real, horário de funcionamento e mapa do Google Maps integrado.
+- Hierarquia: iPhones > iPads/Tecnologia > Perfumes > Roupas.
+- Fotos reais da loja em todas as seções principais.
+- Textos de troca (Xiaomi por iPhone), garantia (90 dias) e parcelamento (18x) confirmados.
+- Todos os botões de produto abrem o WhatsApp para consulta de disponibilidade.
+
+O que ainda depende de confirmação futura (marcado como "consulte pelo WhatsApp"):
+- Preços e estoque em tempo real (o site é uma vitrine, não uma loja virtual com carrinho).
+- Fotos individuais de cada modelo de iPhone/iPad (hoje usam imagens genéricas de referência
+  até que fotos reais de cada aparelho sejam fornecidas).
+
+Qualquer ajuste de texto, produto ou imagem pode ser feito diretamente no arquivo
+src/App.tsx (o conteúdo do site) ou trocando os arquivos em src/assets/images/.
