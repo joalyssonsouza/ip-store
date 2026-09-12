@@ -527,7 +527,7 @@ function Header({
 
 function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
   return (
-    <section className="relative min-h-screen md:min-h-[85vh] flex items-center overflow-hidden bg-[#080808]">
+    <section className="relative min-h-[78vh] md:min-h-screen flex items-center overflow-hidden bg-[#080808]">
       {/* background image */}
       <div className="absolute inset-0">
         <img
@@ -542,10 +542,10 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
 
       <div className="relative max-w-6xl mx-auto px-6 md:px-12 pt-24 md:pt-0 pb-20 md:pb-16 w-full">
         <div className="max-w-2xl">
-          <div
-            className="flex items-center gap-3 mb-8"
-            style={{ animation: "fadeUp 0.8s ease 0.1s both" }}
-          >
+         <div
+          className="flex flex-col items-start sm:flex-row gap-3"
+          style={{ animation: 'fadeUp 0.8s ease 0.65s both' }}
+        >
             <div className="w-8 h-px bg-white/25" />
             <span className="text-[9px] tracking-[0.35em] uppercase text-gray-400 font-mono">
               Barrolândia · Belmonte · BA
@@ -553,14 +553,14 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
           </div>
 
           <h1
-            className="font-serif text-5xl md:text-6xl lg:text-[72px] leading-[1.02] text-white mb-6"
+            className="font-serif text-3xl md:text-7xl lg:text-[88px] leading-[1.02] text-white mb-5"
             style={{ animation: "fadeUp 0.8s ease 0.25s both" }}
           >
             IP Store
           </h1>
 
           <p
-            className="text-xl md:text-2xl text-gray-300 mb-3 font-light tracking-wide"
+            className="text-lg md:text-2xl text-gray-300 mb-3 font-light tracking-wide"
             style={{ animation: "fadeUp 0.8s ease 0.4s both" }}
           >
             Tecnologia, estilo e confiança.
@@ -577,12 +577,17 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
             className="flex flex-col sm:flex-row gap-3"
             style={{ animation: "fadeUp 0.8s ease 0.65s both" }}
           >
-            <Btn variant="primary" onClick={() => onNavigate("iphones")}>
+            <Btn
+              variant="primary"
+              className="text-[8px] px-4 py-3"
+              onClick={() => onNavigate('iphones')}
+            >
               Conheça nossos produtos
             </Btn>
             <Btn
               variant="outline"
-              onClick={() => window.open(WHATSAPP_URL, "_blank")}
+              className="text-[8px] px-4 py-3"
+              onClick={() => window.open(WHATSAPP_URL, '_blank')}
             >
               <WhatsAppIcon className="h-3.5 w-3.5" />
               Falar no WhatsApp
