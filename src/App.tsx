@@ -527,14 +527,14 @@ function Header({
 
 function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
   return (
-    <section className="relative min-h-[78vh] md:min-h-screen flex items-center overflow-hidden bg-[#080808]">
+    <section className="relative min-h-[64vh] md:min-h-screen flex items-center overflow-hidden bg-[#080808]">
       {/* background image */}
       <div className="absolute inset-0">
         <img
           src={fachadaHero}
           alt="Fachada da IP Store"
           className="w-full h-full object-cover opacity-95"
-          style={{ objectPosition: "center 45%" }}
+          style={{ objectPosition: "center 35%" }}
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -579,14 +579,14 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
           >
             <Btn
               variant="primary"
-              className="text-[8px] px-4 py-3"
+              className="text-[7px] px-3 py-2.5"
               onClick={() => onNavigate('iphones')}
             >
               Conheça nossos produtos
             </Btn>
             <Btn
               variant="outline"
-              className="text-[8px] px-4 py-3"
+              className="text-[7px] px-3 py-2.5"
               onClick={() => window.open(WHATSAPP_URL, '_blank')}
             >
               <WhatsAppIcon className="h-3.5 w-3.5" />
@@ -596,7 +596,7 @@ function HeroSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-95">
+      <div className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 opacity-95">
         <div
           className="w-px h-12 bg-white/50"
           style={{ animation: "pulse 2s infinite" }}
@@ -631,7 +631,7 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
           {/* iPhones — large feature */}
           <FadeIn
             delay={0.1}
-            className="group relative overflow-hidden bg-[#0a0a0a] aspect-[4/5] md:row-span-2 md:aspect-auto cursor-pointer"
+            className="group relative overflow-hidden bg-[#0a0a0a] aspect-[4/5] row-span-2 md:aspect-auto cursor-pointer"
             up={false}
           >
             <div
@@ -644,7 +644,7 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-8 md:p-10">
+              <div className="absolute bottom-0 left-0 p-4 md:p-10">
                 <p className="text-[9px] tracking-[0.3em] uppercase text-gray-400 font-mono mb-3">
                   Principal categoria
                 </p>
@@ -859,19 +859,21 @@ function FeaturesSection() {
             Por que escolher a IP Store?
           </h2>
         </FadeIn>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-px bg-white/5">
+        <div className="grid grid-cols-4 gap-px bg-white/5">
           {features.map((f, i) => (
             <FadeIn
               key={f.title}
               delay={i * 0.1}
-              className="bg-[#0d0d0d] p-8 md:p-10"
+              className="bg-[#0d0d0d] p-3 sm:p-6 md:p-10 min-w-0 flex flex-col"
               up={false}
             >
               <div className="text-gray-400 mb-6">{f.icon}</div>
-              <h3 className="text-sm font-semibold text-white tracking-wide mb-3 uppercase text-[11px] tracking-[0.18em]">
+              <h3 className="text-[8px] font-semibold text-white uppercase tracking-[0.08em] mb-2 whitespace-nowrap">
                 {f.title}
               </h3>
-              <p className="text-sm text-gray-500 leading-relaxed">{f.desc}</p>
+              <p className="text-[8px] sm:text-xs text-gray-500 leading-tight">
+              {f.desc}
+            </p>
             </FadeIn>
           ))}
         </div>
@@ -884,8 +886,8 @@ function TradeSection() {
   return (
     <section className="bg-[#0a0a0a] py-24 md:py-32 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-16 md:gap-20 items-center">
-          <FadeIn className="order-2 md:order-1">
+        <div className="grid grid-cols-2 gap-4 md:gap-20 items-center">
+          <FadeIn className="order-1 md:order-1">
             <SectionLabel>Troca</SectionLabel>
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
               Seu Xiaomi pode entrar
@@ -903,7 +905,7 @@ function TradeSection() {
             </Btn>
           </FadeIn>
 
-          <FadeIn delay={0.15} className="order-1 md:order-2" up={false}>
+          <FadeIn delay={0.15} className="order-2 md:order-2" up={false}>
             <div className="aspect-[4/3] bg-[#111] overflow-hidden">
               <img
                 src={trocaXiaomi}
@@ -969,8 +971,8 @@ function PackagingSection() {
   return (
     <section className="bg-[#080808] py-24 md:py-28 border-t border-white/5">
       <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <FadeIn delay={0.1} up={false}>
+        <div className="grid grid-cols-2 gap-4 md:gap-16 items-center">
+          <FadeIn className="order-2 md:order-2" delay={0.1} up={false}>
             <div className="relative aspect-[4/3] bg-[#111] overflow-hidden">
               <img
                 src={acessoriosCabos}
@@ -980,7 +982,7 @@ function PackagingSection() {
             </div>
           </FadeIn>
 
-          <FadeIn className="md:pl-8">
+          <FadeIn className="order-1 md:order-1 md:pl-8">
             <SectionLabel>Acessórios</SectionLabel>
             <h2 className="font-serif text-4xl md:text-5xl text-white mb-6 leading-tight">
               Seu iPhone,
