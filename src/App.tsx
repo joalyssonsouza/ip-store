@@ -1401,11 +1401,18 @@ function IPhonePage() {
                       </div>
                     )}
                     <button
-                      className="text-[9px] tracking-[0.18em] uppercase text-gray-500 hover:text-white transition-colors"
-                      onClick={() => window.open(WHATSAPP_URL, "_blank")}
-                    >
-                      Consultar disponibilidade →
-                    </button>
+                    className="text-[9px] tracking-[0.18em] uppercase text-gray-500 hover:text-white transition-colors"
+                    onClick={() =>
+                      window.open(
+                        `${WHATSAPP_URL}?text=${encodeURIComponent(
+                          `Olá! Gostaria de consultar o ${phone.model}. Poderia me informar a disponibilidade, valor e condições de pagamento?`
+                        )}`,
+                        "_blank"
+                      )
+                    }
+                  >
+                    Consultar disponibilidade →
+                  </button>
                   </div>
                 </FadeIn>
               ))}
@@ -1750,7 +1757,7 @@ function PerfumesPage() {
         </FadeIn>
 
         {/* Grid com foto real de cada perfume */}
-        <div className="grid grid-cols-5 sm:grid-cols-5 lg:grid-cols-5 gap-3 bg-white/5">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-5 gap-3 bg-white/5">
           {perfumes.map((p, i) => (
             <FadeIn key={p.id} delay={i * 0.06} up={false}>
               <div className="group bg-[#0d0d0d] hover:bg-[#111] transition-colors h-full flex flex-col justify-between">
@@ -1771,11 +1778,18 @@ function PerfumesPage() {
                     </h3>
                   </div>
                   <button
-                    className="mt-6 text-[9px] tracking-[0.18em] uppercase text-gray-500 hover:text-white transition-colors text-left"
-                    onClick={() => window.open(WHATSAPP_URL, "_blank")}
-                  >
-                    Consultar →
-                  </button>
+                  className="mt-6 text-[9px] tracking-[0.18em] uppercase text-gray-500 hover:text-white transition-colors text-left"
+                  onClick={() =>
+                    window.open(
+                      `${WHATSAPP_URL}?text=${encodeURIComponent(
+                        `Olá! Gostaria de consultar o perfume ${p.name}. Poderia me informar a disponibilidade e o valor?`
+                      )}`,
+                      "_blank"
+                    )
+                  }
+                >
+                  Consultar →
+                </button>
                 </div>
               </div>
             </FadeIn>
@@ -1793,11 +1807,11 @@ function PerfumesPage() {
           >
             Falar no WhatsApp
           </Btn>
-        </FadeIn>
-      </div>
-    </div>
-  );
-}
+                  </FadeIn>
+                </div>
+              </div>
+            );
+          }
 
 // ── ROUPAS PAGE ───────────────────────────────────────────────────────────────
 
