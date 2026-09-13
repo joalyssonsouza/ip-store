@@ -644,7 +644,7 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-4 md:p-10">
+              <div className="absolute bottom-2 left-0 p-4 md:p-10">
                 <p className="text-[9px] tracking-[0.3em] uppercase text-gray-400 font-mono mb-3">
                   Principal categoria
                 </p>
@@ -724,7 +724,7 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent" />
                 <div className="absolute bottom-0 left-0 p-5 md:p-6">
-                  <h3 className="font-serif text-2xl md:text-3xl text-white mb-1">
+                  <h3 className="font-serif text-xl md:text-3xl text-white mb-1">
                     Perfumes
                   </h3>
                   <p className="text-xs text-gray-500 mb-4 hidden md:block">
@@ -864,7 +864,7 @@ function FeaturesSection() {
             <FadeIn
               key={f.title}
               delay={i * 0.1}
-              className="bg-[#0d0d0d] p-3 sm:p-6 md:p-10 min-w-0 flex flex-col"
+              className="bg-[#0d0d0d] px-1 py-3 sm:p-6 md:p-10 min-w-0 flex flex-col"
               up={false}
             >
               <div className="text-gray-400 mb-6">{f.icon}</div>
