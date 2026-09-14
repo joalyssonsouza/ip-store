@@ -998,8 +998,8 @@ function PackagingSection() {
               pronto para o dia a dia.
             </p>
 
-            <div className="grid grid-cols-3 gap-px bg-white/5 mb-10">
-              {["Capinha", "Película", "Cabo"].map((item) => (
+            <div className="grid grid-cols-3 gap-2 bg-transparent mb-10">
+              {['Capinha', 'Película', 'Cabo'].map((item) => (
                 <div key={item} className="bg-[#080808] py-5 text-center">
                   <p className="text-[9px] tracking-[0.22em] uppercase text-gray-500 font-mono">
                     {item}
