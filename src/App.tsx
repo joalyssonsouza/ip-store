@@ -65,13 +65,17 @@ const IG_MAIN_HANDLE = "@ip_storecell";
 const IG_MAIN_URL = "https://instagram.com/ip_storecell";
 const IG_ROUPAS_HANDLE = "@ip_storeroupas";
 const IG_ROUPAS_URL = "https://instagram.com/ip_storeroupas";
-const ADDRESS_LINE_1 = "Praça Castro Alves, Barrolândia";
-const ADDRESS_LINE_2 = "Belmonte – BA";
+const ADDRESS_LINE_1 = "Rua Jaime Couto Conceição, em frente à Praça Castro Alves";
+
+const ADDRESS_LINE_2 = "Barrolândia – Belmonte – BA";
+
 const MAPS_QUERY = encodeURIComponent(
-  "Praça Castro Alves, Barrolândia, Belmonte - BA",
+  "Rua Jaime Couto Conceição, Barrolândia, Belmonte - BA",
 );
+
 const MAPS_URL =
   "https://www.google.com/maps/search/?api=1&query=" + MAPS_QUERY;
+
 const MAPS_EMBED_URL = `https://www.google.com/maps?q=${MAPS_QUERY}&output=embed`;
 const HOURS_TEXT = "Segunda a sábado, das 8h às 17h";
 const DELIVERY_TEXT =
@@ -644,11 +648,11 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-2 left-0 p-4 md:p-10">
+              <div className="absolute bottom-0 left-0 p-4 md:p-10 translate-y-4 md:translate-y-0">
                 <p className="text-[9px] tracking-[0.3em] uppercase text-gray-400 font-mono mb-3">
                   Principal categoria
                 </p>
-                <h3 className="font-serif text-4xl md:text-5xl text-white mb-3">
+                <h3 className="font-serif text-3xl md:text-5xl text-white mb-3">
                   iPhones
                 </h3>
                 <p className="text-sm text-gray-400 mb-6 max-w-xs">
@@ -692,8 +696,8 @@ function CategoriesSection({ onNavigate }: { onNavigate: (p: Page) => void }) {
                 style={{ objectPosition: "center 20%" }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 p-7 md:p-8">
-                <h3 className="font-serif text-3xl md:text-4xl text-white mb-2">
+              <div className="absolute bottom-0 left-0 p-7 md:p-8 translate-y-17 md:translate-y-0">
+                <h3 className="font-serif text-xl md:text-4xl text-white mb-2">
                   iPads & Tecnologia
                 </h3>
                 <p className="text-sm text-gray-400 mb-5">
@@ -868,9 +872,9 @@ function FeaturesSection() {
               up={false}
             >
               <div className="text-gray-400 mb-6">{f.icon}</div>
-              <h3 className="text-[8px] font-semibold text-white uppercase tracking-[0.08em] mb-2 whitespace-nowrap">
+             <h3 className="text-[7px] font-semibold text-white uppercase tracking-[0.05em] mb-2 whitespace-nowrap">
                 {f.title}
-              </h3>
+            </h3>
               <p className="text-[8px] sm:text-xs text-gray-500 leading-tight">
               {f.desc}
             </p>
@@ -1351,7 +1355,7 @@ function IPhonePage() {
             <SectionLabel>Seleção especial</SectionLabel>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
               <div>
-                <h2 className="font-serif text-4xl md:text-5xl text-white mb-3">
+                <h2 className="font-serif text-3xl md:text-5xl text-white mb-3">
                   iPhones Seminovos
                 </h2>
                 <p className="text-gray-500 max-w-md">
@@ -1957,8 +1961,8 @@ function ALojaPage() {
           </h1>
           <p className="text-gray-400 text-lg max-w-lg">
             Uma experiência pensada para você. Tecnologia, estilo e confiança
-            reunidos em um só lugar, na Praça Castro Alves, em Barrolândia,
-            Belmonte – BA.
+            reunidos em um só lugar, na Rua Jaime Couto Conceição, em frente à
+            Praça Castro Alves, Barrolândia, Belmonte – BA.
           </p>
         </div>
       </div>
@@ -1977,8 +1981,9 @@ function ALojaPage() {
               personalizado.
             </p>
             <p className="text-gray-500 leading-relaxed">
-              Na Praça Castro Alves, em Barrolândia, a loja atende Belmonte e
-              região para quem busca iPhones, iPads, perfumes e muito mais.
+              Na Rua Jaime Couto Conceição, em frente à Praça Castro Alves,
+              em Barrolândia, a loja atende Belmonte e região para quem busca
+              iPhones, iPads, perfumes e muito mais.
             </p>
           </FadeIn>
 
