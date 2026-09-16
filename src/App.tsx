@@ -59,7 +59,7 @@ type Page =
 type PhoneFilter = "todos" | "novos" | "seminovos" | "pro" | "promax";
 
 // ── Dados reais confirmados da loja ─────────────────────────────────────────
-const WHATSAPP_NUMBER = "5573998532228";
+const WHATSAPP_NUMBER = "5500000000000";
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
 const IG_MAIN_HANDLE = "@ip_storecell";
 const IG_MAIN_URL = "https://instagram.com/ip_storecell";
